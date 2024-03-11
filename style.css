@@ -7,30 +7,31 @@ body {
 }
 
 .menu-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   width: 900px;
-  height: 100px;
   background: linear-gradient(to right, #5a5786, #021a5e);
   border-radius: 25px;
 }
+
+.navbar-brand span {
+  font-size: 18px;
+  transition: font-size 0.1s;
+  margin-right: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.navbar-brand span:hover {
+  font-size: 22px;
+}
+
 .items-menu {
   margin: 0;
+  margin-left: 12px;
   height: 100%;
   display: flex;
   align-items: center;
 }
-span {
-  font-size: 18px;
-  transition: font-size 0.1s;
-}
 
-span:hover {
-  font-size: 22px;
-}
-.items-menu > li {
-  color: rgb(255, 255, 255);
+.items-menu > .d-none {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -44,26 +45,87 @@ span:hover {
   z-index: 10;
 }
 
-.items-menu > li:hover {
+.items-menu > .d-none:hover {
   width: 70px;
   height: 70px;
 }
-a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
+
+.navbar-brand img {
+  cursor: pointer;
+  border-radius: 50px;
 }
 
-.profile {
+.sub-menu-wrap {
+  position: absolute;
+  top: 110px;
+  right: 20px;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.2s;
+}
+
+.sub-menu-wrap.open-menu {
+  max-height: 290px;
+}
+
+.sub-menu {
+  background-color: #fff;
+  color: rgb(65, 64, 64);
+  padding: 20px;
+  margin: 10px;
+}
+
+.user-info {
   display: flex;
   align-items: center;
-  justify-content: center;
 }
 
-span {
-  margin-right: 30px;
-  color: white;
+.user-info h3 {
+  font-weight: 600;
 }
-.profile > a > img {
-  margin-right: 25px;
-  border-radius: 50px;
+
+.user-info img {
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.sub-menu-link {
+  display: flex;
+  align-items: left;
+  text-decoration: none;
+  color: #525252;
+}
+
+.sub-menu-link p {
+  width: 100%;
+}
+
+.sub-menu-link span {
+  color: #525252;
+  margin: 0;
+  font-size: 22px;
+  transition: transform 0.5s;
+}
+
+.sub-menu-link:hover span {
+  color: black;
+  transform: translateX(5px);
+}
+
+.sub-menu-link:hover p {
+  color: black;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .menu-container {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 576px) {
+  .items-menu {
+    align-items: start;
+  }
 }

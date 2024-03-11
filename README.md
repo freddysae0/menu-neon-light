@@ -1,7 +1,10 @@
-# A dark navbar
+# A responsive navbar
+## Description
+It's made with HTML, CSS, Bootstrap 5 and a bit of JavaScript, **Enjoy it**
 
-It's maded with html and css.
+## Design
+![navbar expanded](/assets/navbar-expanded.jpg)
 
+## Contribution
 
-![alt text](https://github.com/freddysae0/navbar/blob/main/assets/nav1.png)
-Enjoy it.
+To contribute to this project please check out the [contribution guidelines](https://github.com/YurisCodingClub/accessibility-mentor/blob/main/CONTRIBUTING.md).
